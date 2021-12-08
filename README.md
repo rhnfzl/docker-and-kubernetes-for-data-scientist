@@ -5,19 +5,24 @@
 ## DOCKER
 
 > What Docker does?
-    >> It standardises the Einvironment
-    >> Build once and deploy it anywhere
-    >> Isolation using virtualization where resources are shared
-    >> Portbility helps to switch to different environments
+>> It standardises the Einvironment
+>> Build once and deploy it anywhere
+>> Isolation using virtualization where resources are shared
+>> Portbility helps to switch to different environments
 
+<!-- This is commented out.
 WSGI : Web Server Gateway Interface
+DockerHUb has Images -->
 
-DockerHUb has Images
+* Docker Container can be downloaed from [DockerHub](https://hub.docker.com/)
 
 > Difference Between Container and Image
-    >> Container is a running environment for Image
-    >> Container provides the application image, port binding, virtual file system
-	
+>> Container is a running environment for Image
+>> Container provides the application image, port binding, virtual file system
+
+### Resource Used
+
+* [Docker Tutorial for Beginners](https://youtu.be/3c-iBn73dDE)
 	
 ### Docker Commands
 
@@ -37,19 +42,26 @@ Difference between the docker run and docker start is, docker run lets to start 
 
 #### Docker Host
 > *Concept: * Container Port vs Host Port : 
-    >> Multiple containers can run on a host (laptop/pc). 
-    >> Host has certain ports available that can be opened for certain applications.
-    >> Conflict would arise when the same port is used by two different containers.
-    >> So it is essential to create a binding between the host and the container with different port numbers such that it should be able to communicate with the application without any interference.
-    >> Host will know how to redirect to the container when host binding is applied
+>> Multiple containers can run on a host (laptop/pc). 
+>> Host has certain ports available that can be opened for certain applications.
+>> Conflict would arise when the same port is used by two different containers.
+>> So it is essential to create a binding between the host and the container with different port numbers such that it should be able to communicate with the application without any interference.
+>> Host will know how to redirect to the container when host binding is applied
 	
 * ```docker run -p<self defined port number for host>:<container port> <image name>``` : to bind the host port to container port ```docker ps -a``` could be used to see the port information.
 
 #### Debugging Docker
 
 * ```docker logs <container id>``` or ```docker logs <docker name>```: to see the logs for the docker
-* ```docker exec -it <container id> /bin/bash``` : to open the interactive command inside the container can also be used to export the data out from the container, exit out pf container by using ```exit`` command, see the einvironmental variables using ```env```.
+* ```docker exec -it <container id> /bin/bash``` : to open the interactive command inside the container can also be used to export the data out from the container, exit out pf container by using ```exit``` command, see the einvironmental variables using ```env```.
 
+
+
+
+
+#### Docker Projects 
+
+* Simulation of [Proactive-BPM-Adaptation-via-Online-Reinforcement-Learning](https://github.com/rhnfzl/simulation-proactive-bpm-adaptation) was performed using docker image provided by the author of the paper.
 
 
 
