@@ -23,10 +23,26 @@ DockerHUb has Images -->
 ### Resource Used
 
 * [Docker Tutorial for Beginners](https://youtu.be/3c-iBn73dDE)
-	
-### Docker Commands
+* [Docker for Data Science](https://youtu.be/jbb1dbFaovg)
 
-* ```docker pull ``` : to pull the docker image
+### Dockerfile
+
+* File containing all commands used to assemble image
+* Automated build
+* Stucture of Dockerfile Commands
+	* ```FROM``` : sets base image
+	* ```LABEL``` : add metadata to image
+		* MAINTAINER is depreciated
+		* LABEL maintainer="Rehan <rehanfazal@live.com>" 
+	* ```COPY``` : copies files / directories into image
+		* .dockerignore
+	* ```ENV``` : sets environment variables
+	* ```WORKDIR``` : sets working directory
+	* ```RUN``` : executes shell commands in a new layer
+
+#### Docker Commands
+
+* ```docker pull ``` : to pull the docker image e.g : ```docker pull python:3.6.5-alpine3.7```
 * ```docker images``` : to see the docker images
 * ```docker rmi <image id>``` : to remove docker image
 * ```docker ps``` : list which dockers are running and obtain the container id
@@ -34,9 +50,21 @@ DockerHUb has Images -->
 * ```docker run :``` : pull and start a image with specific version number
 * ```docker run -d <image name>``` : starts a container in detach mode which lets to use the terminal again
 * ```docker run -d -p<host port>:<docker port> --name <coustom docker name> <image name> : to run the docker with specific name
-* ```docker stop ``` : to stop the specific container
-* ```docker start ```: to start the container with the same container id
+* ```docker stop <container name/ container id>``` : to stop the specific container
+* ```docker start <container name/ container id>```: to start the container with the same container id
+* ```docker start -ia <container name/ container id>``` : -i to make standard interacive -a to connect standard out and error
 * ```docker ps -a``` : lists which docker is running and not running, so stopped docker can be restarted from the container id from here
+
+* [Options]
+	* -d : Detached (runs in background)
+	* -a : Attach to STDOUT/STDERR
+	* -i : Interactive (keeps STDIN open)
+	* -t : Allocates pseudo-TTY
+	* --name [NAME] : set the container name
+	
+* [COMMAND]
+	* Can pass in parameter or ```bin/
+
 
 Difference between the docker run and docker start is, docker run lets to start the new instance of the conatainer whereas the docker start lets to re-start the stopped container.
 
@@ -57,7 +85,13 @@ Difference between the docker run and docker start is, docker run lets to start 
 
 
 
+* ```docker network ls``` : to see the docker network
+* ```docker network create <network name>``` : to create network
 
+
+#### Docker Compose
+
+A structured way to store docker comments in ```.yaml``` file. Docker Compose take cares of creating a common Network.
 
 #### Docker Projects 
 
