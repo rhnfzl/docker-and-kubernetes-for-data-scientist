@@ -89,11 +89,11 @@ Difference between the docker run and docker start is, docker run lets to start 
 
 #### Docker Host
 > *Concept: * Container Port vs Host Port : <br />
->> Multiple containers can run on a host (laptop/pc). <br />
->> Host has certain ports available that can be opened for certain applications. <br />
->> Conflict would arise when the same port is used by two different containers. <br />
->> So it is essential to create a binding between the host and the container with different port numbers such that it should be able to communicate with the application without any interference. <br />
->> Host will know how to redirect to the container when host binding is applied. <br />
+>> * Multiple containers can run on a host (laptop/pc). <br />
+>> * Host has certain ports available that can be opened for certain applications. <br />
+>> * Conflict would arise when the same port is used by two different containers. <br />
+>> * So it is essential to create a binding between the host and the container with different port numbers such that it should be able to communicate with the application without any interference. <br />
+>> * Host will know how to redirect to the container when host binding is applied. <br />
 	
 * ```docker run -p<self defined port number for host>:<container port> <image name>``` : to bind the host port to container port ```docker ps -a``` could be used to see the port information.
 
