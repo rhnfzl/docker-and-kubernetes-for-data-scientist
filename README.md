@@ -14,16 +14,19 @@
 WSGI : Web Server Gateway Interface
 DockerHUb has Images -->
 
-* Docker Container can be downloaed from [DockerHub](https://hub.docker.com/)
+* Docker container images can be downloaed from [DockerHub](https://hub.docker.com/)
 
 > Difference Between Container and Image
->> Container is a running environment for Image. <br />
->> Container provides the application image, port binding, virtual file system
+>> Container is a running environment for Image <br />
+>> Container provides the application image, port binding, virtual file system <br />
+>> Docker images are read-only templates used to build containers and Containers are deployed instances created from those templates
 
 ### Resource Used
 
 * [Docker Tutorial for Beginners](https://youtu.be/3c-iBn73dDE)
 * [Docker for Data Science](https://youtu.be/jbb1dbFaovg)
+
+---
 
 ### Dockerfile
 
@@ -42,7 +45,22 @@ DockerHUb has Images -->
 		* ```RUN pip install jupyter``` <br />
 		```RUN pip install pandas``` : 2 layers
 		* ```RUN install jupyter && \``` <br />
-		```RUN install pandas``` : 1 layer
+		```RUN install pandas``` : 1 layer (best practice)
+		
+> [Best Practices of Dockerfile](https://docs.docker.com/develop/develop-images/dockerfile_best-practices/)
+		
+#### Configuring Dockerfile at Runtime
+
+* ENTRYPOINT : configures container to run as executable
+* CMD : provides default for executing container
+	* CMD and ENTRYPOINT interation
+* Two forms:
+	* Shell ```CMD python hello-world.py```
+	* Exec (preferred) ```CMD ["python", "hello-world.py"]
+	
+##### Example Hello World Dockerfile
+
+
 
 #### Docker Commands
 
@@ -73,10 +91,10 @@ Difference between the docker run and docker start is, docker run lets to start 
 
 #### Docker Host
 > *Concept: * Container Port vs Host Port : 
->> Multiple containers can run on a host (laptop/pc). 
->> Host has certain ports available that can be opened for certain applications.
->> Conflict would arise when the same port is used by two different containers.
->> So it is essential to create a binding between the host and the container with different port numbers such that it should be able to communicate with the application without any interference.
+>> Multiple containers can run on a host (laptop/pc) <br />
+>> Host has certain ports available that can be opened for certain applications <br />
+>> Conflict would arise when the same port is used by two different containers <br />
+>> So it is essential to create a binding between the host and the container with different port numbers such that it should be able to communicate with the application without any interference <br />
 >> Host will know how to redirect to the container when host binding is applied
 	
 * ```docker run -p<self defined port number for host>:<container port> <image name>``` : to bind the host port to container port ```docker ps -a``` could be used to see the port information.
