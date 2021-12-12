@@ -5,10 +5,10 @@
 ## DOCKER
 
 > What Docker does?
->> It standardises the Einvironment <br />
->> Build once and deploy it anywhere <br />
->> Isolation using virtualization where resources are shared <br />
->> Portbility helps to switch to different environments
+>> It standardises the Einvironment. <br />
+>> Build once and deploy it anywhere. <br />
+>> Isolation using virtualization where resources are shared. <br />
+>> Portbility helps to switch to different environments. <br />
 
 <!-- This is commented out.
 WSGI : Web Server Gateway Interface
@@ -17,9 +17,9 @@ DockerHUb has Images -->
 * Docker container images can be downloaed from [DockerHub](https://hub.docker.com/)
 
 > Difference Between Container and Image
->> Container is a running environment for Image <br />
->> Container provides the application image, port binding, virtual file system <br />
->> Docker images are read-only templates used to build containers and Containers are deployed instances created from those templates
+>> Container is a running environment for Image. <br />
+>> Container provides the application image, port binding, virtual file system. <br />
+>> Docker images are read-only templates used to build containers and Containers are deployed instances created from those templates. <br />
 
 ### Resource Used
 
@@ -89,11 +89,11 @@ Difference between the docker run and docker start is, docker run lets to start 
 
 #### Docker Host
 > *Concept: * Container Port vs Host Port : 
->> Multiple containers can run on a host (laptop/pc) <br />
->> Host has certain ports available that can be opened for certain applications <br />
->> Conflict would arise when the same port is used by two different containers <br />
->> So it is essential to create a binding between the host and the container with different port numbers such that it should be able to communicate with the application without any interference <br />
->> Host will know how to redirect to the container when host binding is applied
+>> Multiple containers can run on a host (laptop/pc). <br />
+>> Host has certain ports available that can be opened for certain applications. <br />
+>> Conflict would arise when the same port is used by two different containers. <br />
+>> So it is essential to create a binding between the host and the container with different port numbers such that it should be able to communicate with the application without any interference. <br />
+>> Host will know how to redirect to the container when host binding is applied. <br />
 	
 * ```docker run -p<self defined port number for host>:<container port> <image name>``` : to bind the host port to container port ```docker ps -a``` could be used to see the port information.
 
