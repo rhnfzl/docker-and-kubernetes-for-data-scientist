@@ -42,14 +42,14 @@ DockerHUb has Images -->
 
 #### Docker Commands
 
-* ```docker pull ``` : to pull the docker image e.g : ```docker pull python:3.6.5-alpine3.7```
+* ```docker pull <image name>``` : to pull the docker image e.g : ```docker pull python:3.6.5-alpine3.7```
 * ```docker images``` : to see the docker images
 * ```docker rmi <image id>``` : to remove docker image
 * ```docker ps``` : list which dockers are running and obtain the container id
 * ```docker run ``` : To run the image as well as can be used for first time to download and run
 * ```docker run :``` : pull and start a image with specific version number
 * ```docker run -d <image name>``` : starts a container in detach mode which lets to use the terminal again
-* ```docker run -d -p<host port>:<docker port> --name <coustom docker name> <image name> : to run the docker with specific name
+* ```docker run -d -p<host port>:<docker port> --name <coustom docker name> <image name>``` : to run the docker with specific name
 * ```docker stop <container name/ container id>``` : to stop the specific container
 * ```docker start <container name/ container id>```: to start the container with the same container id
 * ```docker start -ia <container name/ container id>``` : -i to make standard interacive -a to connect standard out and error
@@ -64,7 +64,6 @@ DockerHUb has Images -->
 	
 * [COMMAND]
 	* Can pass in parameter or ```bin/
-
 
 Difference between the docker run and docker start is, docker run lets to start the new instance of the conatainer whereas the docker start lets to re-start the stopped container.
 
