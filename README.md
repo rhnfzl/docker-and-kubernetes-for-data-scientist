@@ -58,9 +58,7 @@ DockerHUb has Images -->
 	* Shell ```CMD python hello-world.py```
 	* Exec (preferred) ```CMD ["python", "hello-world.py"]
 	
-##### Example Hello World Dockerfile
-
-
+<!-- ##### Example Hello World Dockerfile -->
 
 #### Docker Commands
 
