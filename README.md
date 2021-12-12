@@ -4,7 +4,7 @@
 
 ## DOCKER
 
-> What Docker does?
+> What Docker does? <br />
 >> It standardises the Einvironment. <br />
 >> Build once and deploy it anywhere. <br />
 >> Isolation using virtualization where resources are shared. <br />
@@ -88,7 +88,7 @@ DockerHUb has Images -->
 Difference between the docker run and docker start is, docker run lets to start the new instance of the conatainer whereas the docker start lets to re-start the stopped container.
 
 #### Docker Host
-> *Concept: * Container Port vs Host Port : 
+> *Concept: * Container Port vs Host Port : <br />
 >> Multiple containers can run on a host (laptop/pc). <br />
 >> Host has certain ports available that can be opened for certain applications. <br />
 >> Conflict would arise when the same port is used by two different containers. <br />
@@ -102,11 +102,8 @@ Difference between the docker run and docker start is, docker run lets to start 
 * ```docker logs <container id>``` or ```docker logs <docker name>```: to see the logs for the docker
 * ```docker exec -it <container id> /bin/bash``` : to open the interactive command inside the container can also be used to export the data out from the container, exit out pf container by using ```exit``` command, see the einvironmental variables using ```env```.
 
-
-
 * ```docker network ls``` : to see the docker network
 * ```docker network create <network name>``` : to create network
-
 
 #### Docker Compose
 
