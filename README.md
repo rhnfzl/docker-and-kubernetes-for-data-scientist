@@ -5,9 +5,9 @@
 ## DOCKER
 
 > What Docker does?
->> It standardises the Einvironment
->> Build once and deploy it anywhere
->> Isolation using virtualization where resources are shared
+>> It standardises the Einvironment <br />
+>> Build once and deploy it anywhere <br />
+>> Isolation using virtualization where resources are shared <br />
 >> Portbility helps to switch to different environments
 
 <!-- This is commented out.
@@ -17,7 +17,7 @@ DockerHUb has Images -->
 * Docker Container can be downloaed from [DockerHub](https://hub.docker.com/)
 
 > Difference Between Container and Image
->> Container is a running environment for Image
+>> Container is a running environment for Image. <br />
 >> Container provides the application image, port binding, virtual file system
 
 ### Resource Used
@@ -39,9 +39,9 @@ DockerHUb has Images -->
 	* ```ENV``` : sets environment variables
 	* ```WORKDIR``` : sets working directory
 	* ```RUN``` : executes shell commands in a new layer
-		* ```RUN pip install jupyter```
+		* ```RUN pip install jupyter``` <br />
 		```RUN pip install pandas``` : 2 layers
-		* ```RUN install jupyter && \```
+		* ```RUN install jupyter && \``` <br />
 		```RUN install pandas``` : 1 layer
 
 #### Docker Commands
