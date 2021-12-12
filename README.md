@@ -5,10 +5,10 @@
 ## DOCKER
 
 > What Docker does? <br />
->> It standardises the Einvironment. <br />
->> Build once and deploy it anywhere. <br />
->> Isolation using virtualization where resources are shared. <br />
->> Portbility helps to switch to different environments. <br />
+>> * It standardises the Einvironment. <br />
+>> * Build once and deploy it anywhere. <br />
+>> * Isolation using virtualization where resources are shared. <br />
+>> * Portbility helps to switch to different environments. <br />
 
 <!-- This is commented out.
 WSGI : Web Server Gateway Interface
@@ -17,9 +17,9 @@ DockerHUb has Images -->
 * Docker container images can be downloaed from [DockerHub](https://hub.docker.com/)
 
 > Difference Between Container and Image
->> Container is a running environment for Image. <br />
->> Container provides the application image, port binding, virtual file system. <br />
->> Docker images are read-only templates used to build containers and Containers are deployed instances created from those templates. <br />
+>> * Container is a running environment for Image. <br />
+>> * Container provides the application image, port binding, virtual file system. <br />
+>> * Docker images are read-only templates used to build containers and Containers are deployed instances created from those templates. <br />
 
 ### Resource Used
 
