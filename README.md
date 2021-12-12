@@ -39,6 +39,10 @@ DockerHUb has Images -->
 	* ```ENV``` : sets environment variables
 	* ```WORKDIR``` : sets working directory
 	* ```RUN``` : executes shell commands in a new layer
+		* ```RUN pip install jupyter```
+		```RUN pip install pandas``` : 2 layers
+		* ```RUN install jupyter && \```
+		```RUN install pandas``` : 1 layer
 
 #### Docker Commands
 
