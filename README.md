@@ -58,10 +58,11 @@ DockerHUb has Images -->
 	* Shell ```CMD python hello-world.py```
 	* Exec (preferred) ```CMD ["python", "hello-world.py"]
 	
-<!-- ##### Example Hello World Dockerfile -->
+* [Example Hello World Dockerfile](/01-hello-world/Dockerfile)
 
 #### Docker Commands
 
+* ```docker build -t hello-world:0.0.1 .``` : to build the images from the docker file, -t tags the image, "hello-world:0.0.1" tag name and version and "." sets the current directory.
 * ```docker pull <image name>``` : to pull the docker image e.g : ```docker pull python:3.6.5-alpine3.7```
 * ```docker images``` : to see the docker images
 * ```docker rmi <image id>``` : to remove docker image
