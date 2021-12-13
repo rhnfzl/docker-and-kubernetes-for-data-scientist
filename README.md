@@ -66,13 +66,11 @@ DockerHUb has Images -->
 
 * ```docker create```
 * ```docker rename```
-<br />
 * ```docker run ``` : To run the image as well as can be used for first time to download and run
 * ```docker run :``` : pull and start a image with specific version number
 * ```docker run -d <image name>``` : starts a container in detach mode which lets to use the terminal again
 * ```docker run -d -p<host port>:<docker port> --name <coustom docker name> <image name>``` : to run the docker with specific name
 * ```docker run -v /full/local/path:/mounted_dir``` : "host path : container path" adding volume to the container
-<br />
 * ```docker rm```
 * ```docker update```
 
