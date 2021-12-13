@@ -12,7 +12,7 @@
 WSGI : Web Server Gateway Interface
 DockerHUb has Images -->
 
-* Docker container images can be downloaed from [DockerHub](https://hub.docker.com/)
+* Docker container images can be downloaed from [DockerHub](https://hub.docker.com/). It is a public [registry](https://docs.docker.com/registry/) where you can find and download Docker images.
 
 > Difference Between Container and Image
 >> * Container is a running environment for Image. <br />
@@ -22,7 +22,7 @@ DockerHUb has Images -->
 ### Resource Used
 
 * [Docker Tutorial for Beginners](https://youtu.be/3c-iBn73dDE)
-* [Docker for Data Science](https://youtu.be/jbb1dbFaovg)
+* [Docker for Data Science](https://youtu.be/jbb1dbFaovg) and the [GitHub Repo](https://github.com/rhnfzl/docker-and-kubernetes-for-data-scientist)
 
 ### Dockerfile
 
@@ -54,7 +54,7 @@ DockerHUb has Images -->
 	* CMD and ENTRYPOINT interation
 * Two forms:
 	* Shell ```CMD python hello-world.py```
-	* Exec (preferred) ```CMD ["python", "hello-world.py"]
+	* Exec (preferred) ```CMD ["python", "hello-world.py"]```
 	
 * [Example Hello World Dockerfile](/01-hello-world/Dockerfile)
 
@@ -138,7 +138,7 @@ Difference between the docker run and docker start is, docker run lets to start 
 	* --name [NAME] : set the container name
 	
 * [COMMAND]
-	* Can pass in parameter or ```bin/
+	* Can pass in parameter or ```bin/```
 
 #### Docker Host
 > *Concept: * Container Port vs Host Port : <br />
