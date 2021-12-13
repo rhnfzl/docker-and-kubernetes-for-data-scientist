@@ -67,10 +67,10 @@ DockerHUb has Images -->
 * ```docker create```
 * ```docker rename```
 * ```docker run ``` : To run the image as well as can be used for first time to download and run
-* ```docker run :``` : pull and start a image with specific version number
-* ```docker run -d <image name>``` : starts a container in detach mode which lets to use the terminal again
-* ```docker run -d -p<host port>:<docker port> --name <coustom docker name> <image name>``` : to run the docker with specific name
-* ```docker run -v /full/local/path:/mounted_dir``` : "host path : container path" adding volume to the container
+	* ```docker run :``` : pull and start a image with specific version number
+	* ```docker run -d <image name>``` : starts a container in detach mode which lets to use the terminal again
+	* ```docker run -d -p<host port>:<docker port> --name <coustom docker name> <image name>``` : to run the docker with specific name
+	* ```docker run -v /full/local/path:/mounted_dir``` : "host path : container path" adding volume to the container
 * ```docker rm```
 * ```docker update```
 
@@ -79,7 +79,7 @@ DockerHUb has Images -->
 * ```docker images``` : to see the docker images
 * ```docker import```
 * ```docker build```
-* ```docker build -t hello-world:0.0.1 .``` : to build the images from the docker file, -t tags the image, "hello-world:0.0.1" tag name and version and "." sets the current directory.
+	* ```docker build -t hello-world:0.0.1 .``` : to build the images from the docker file, -t tags the image, "hello-world:0.0.1" tag name and version and "." sets the current directory.
 * ```docker commit```
 * ```docker rmi <image id>``` : to remove docker image
 * ```docker load```
