@@ -1,7 +1,5 @@
 # Docker and Kubernetes for data scientist
 
----
-
 ## DOCKER
 
 > What Docker does? <br />
@@ -26,8 +24,6 @@ DockerHUb has Images -->
 * [Docker Tutorial for Beginners](https://youtu.be/3c-iBn73dDE)
 * [Docker for Data Science](https://youtu.be/jbb1dbFaovg)
 
----
-
 ### Dockerfile
 
 * File containing all commands used to assemble image
@@ -46,6 +42,8 @@ DockerHUb has Images -->
 		```RUN pip install pandas``` : 2 layers
 		* ```RUN install jupyter && \``` <br />
 		```RUN install pandas``` : 1 layer (best practice)
+	* ```VOLUME``` /mounted_dir : mount point for external volumes, although need -v flag to connect
+	* ```EXPOSE``` 8888 : Make port 8888 available to outside world, again need -p flag to connect
 		
 > [Best Practices of Dockerfile](https://docs.docker.com/develop/develop-images/dockerfile_best-practices/)
 		
@@ -62,31 +60,87 @@ DockerHUb has Images -->
 
 #### Docker Commands
 
-* ```docker build -t hello-world:0.0.1 .``` : to build the images from the docker file, -t tags the image, "hello-world:0.0.1" tag name and version and "." sets the current directory.
-* ```docker pull <image name>``` : to pull the docker image e.g : ```docker pull python:3.6.5-alpine3.7```
-* ```docker images``` : to see the docker images
-* ```docker rmi <image id>``` : to remove docker image
-* ```docker ps``` : list which dockers are running and obtain the container id
+##### --Lifecycle--
+
+###### For Containers
+
+* ```docker create```
+* ```docker rename```
+<br />
 * ```docker run ``` : To run the image as well as can be used for first time to download and run
 * ```docker run :``` : pull and start a image with specific version number
 * ```docker run -d <image name>``` : starts a container in detach mode which lets to use the terminal again
 * ```docker run -d -p<host port>:<docker port> --name <coustom docker name> <image name>``` : to run the docker with specific name
+* ```docker run -v /full/local/path:/mounted_dir``` : "host path : container path" adding volume to the container
+<br />
+* ```docker rm```
+* ```docker update```
+
+###### For Images
+
+* ```docker images``` : to see the docker images
+* ```docker import```
+* ```docker build```
+* ```docker build -t hello-world:0.0.1 .``` : to build the images from the docker file, -t tags the image, "hello-world:0.0.1" tag name and version and "." sets the current directory.
+* ```docker commit```
+* ```docker rmi <image id>``` : to remove docker image
+* ```docker load```
+* ```docker save```
+
+##### --Info--
+
+###### For Containers
+* ```docker ps``` : list which containers are running and obtain the container id
+* ```docker ps -a``` : lists which docker is running and not running, so stopped docker can be restarted from the container id from here
+* ```docker logs``` 
+* ```docker inspect``` 
+* ```docker events``` 
+* ```docker portdocker top``` 
+* ```docker stats``` 
+* ```docker diff``` 
+
+###### For Images
+
+* ```docker history```
+* ```docker tag```
+
+##### --Misc (Containers)--
+
+* ```docker cp```
+* ```docker export```
+* ```docker exec```
+
+##### --Start/Stop (Containers)--
 * ```docker stop <container name/ container id>``` : to stop the specific container
 * ```docker start <container name/ container id>```: to start the container with the same container id
 * ```docker start -ia <container name/ container id>``` : -i to make standard interacive -a to connect standard out and error
-* ```docker ps -a``` : lists which docker is running and not running, so stopped docker can be restarted from the container id from here
+* ```docker restart```
+* ```docker pause```
+* ```docker unpause```
+* ```docker wait```
+* ```docker kill```
+* ```docker attach```
+
+Difference between the docker run and docker start is, docker run lets to start the new instance of the conatainer whereas the docker start lets to re-start the stopped container.
+
+##### --Registry (Images)--
+* ```docker pull <image name>``` : to pull the docker image e.g : ```docker pull python:3.6.5-alpine3.7```
+* ```docker push```
+* ```docker login```
+* ```docker logout```
+* ```docker search```
+
 
 * [Options]
 	* -d : Detached (runs in background)
 	* -a : Attach to STDOUT/STDERR
 	* -i : Interactive (keeps STDIN open)
 	* -t : Allocates pseudo-TTY
+	* -v : adding data volume to the container
 	* --name [NAME] : set the container name
 	
 * [COMMAND]
 	* Can pass in parameter or ```bin/
-
-Difference between the docker run and docker start is, docker run lets to start the new instance of the conatainer whereas the docker start lets to re-start the stopped container.
 
 #### Docker Host
 > *Concept: * Container Port vs Host Port : <br />
@@ -102,13 +156,30 @@ Difference between the docker run and docker start is, docker run lets to start 
 
 * ```docker logs <container id>``` or ```docker logs <docker name>```: to see the logs for the docker
 * ```docker exec -it <container id> /bin/bash``` : to open the interactive command inside the container can also be used to export the data out from the container, exit out pf container by using ```exit``` command, see the einvironmental variables using ```env```.
-
 * ```docker network ls``` : to see the docker network
 * ```docker network create <network name>``` : to create network
 
 #### Docker Compose
 
 A structured way to store docker comments in ```.yaml``` file. Docker Compose take cares of creating a common Network.
+
+#### Docker Container Lifecycle
+
+> Conception
+* ```BUILD``` an image from a Dockerfile
+> Birth
+* ```RUN``` (create+start) a container
+> Reporoduction
+* ```COMMIT``` (persist) a container to a new image
+* RUN a new container from an image
+> Sleep
+* ```KILL``` a running contaoner
+> Wake
+* ```START``` a stopped container
+> Death
+* ```RM``` (delete) a stopped container
+> Extinction
+* ```RMI``` a container image (delete image)
 
 #### Docker Projects 
 
