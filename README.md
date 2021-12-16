@@ -1,4 +1,4 @@
-# Docker and Kubernetes for data scientist
+# Docker for Data Scientist
 
 ## DOCKER
 
@@ -22,7 +22,7 @@ DockerHUb has Images -->
 ### Resource Used
 
 * [Docker Tutorial for Beginners](https://youtu.be/3c-iBn73dDE)
-* [Docker for Data Science](https://youtu.be/jbb1dbFaovg) and the [GitHub Repo](https://github.com/rhnfzl/docker-and-kubernetes-for-data-scientist)
+* [Docker for Data Science](https://youtu.be/jbb1dbFaovg) and the [GitHub Repo](https://github.com/docker-for-data-science/docker-for-data-science-tutorial)
 
 ### Dockerfile
 
@@ -66,7 +66,7 @@ DockerHUb has Images -->
 
 * ```docker create```
 * ```docker rename```
-* ```docker run ``` : To run the image as well as can be used for first time to download and run
+* ```docker run ``` : To run the image as well as can be used for first time to download and run, It has multiple [options](https://docs.docker.com/engine/reference/commandline/run/#options)
 	* ```docker run :``` : pull and start a image with specific version number
 	* ```docker run -d <image name>``` : starts a container in detach mode which lets to use the terminal again
 	* ```docker run -d -p<host port>:<docker port> --name <coustom docker name> <image name>``` : to run the docker with specific name
@@ -129,11 +129,12 @@ Difference between the docker run and docker start is, docker run lets to start 
 * ```docker search```
 
 
-* [Options]
-	* -d : Detached (runs in background)
+* [Options] : command line argurments
+	* -d : Detached, i.e. the container would run in the background
 	* -a : Attach to STDOUT/STDERR
-	* -i : Interactive (keeps STDIN open)
-	* -t : Allocates pseudo-TTY
+	* -i : Running the image InteractiveLY (keeps STDIN open)
+	* -t : To run bash inside the docker container created
+	* -p : Connect/publish the container ports to host.
 	* -v : adding data volume to the container
 	* --name [NAME] : set the container name
 	
@@ -184,6 +185,12 @@ A structured way to store docker comments in ```.yaml``` file. Docker Compose ta
 * Simulation of [Proactive-BPM-Adaptation-via-Online-Reinforcement-Learning](https://github.com/rhnfzl/simulation-proactive-bpm-adaptation) was performed using docker image provided by the author of the paper.
 
 
+## Addtional Resources
+
+[Docker Labs](https://github.com/docker/labs)
+[How Docker Can Help You Become A More Effective Data Scientist](https://towardsdatascience.com/how-docker-can-help-you-become-a-more-effective-data-scientist-7fc048ef91d5)
+[A Step Towards Reproducible Data Science : Docker for Data Science Workflows](https://www.analyticsvidhya.com/blog/2017/11/reproducible-data-science-docker-for-data-science/)
+[Docker Deep Dive](https://www.pluralsight.com/courses/docker-deep-dive-update?aid=7010a000002BWqGAAW&promo=&utm_source=non_branded&utm_medium=digital_paid_search_google&utm_campaign=EMEA_Dynamic&utm_content=&gclid=Cj0KCQiA5OuNBhCRARIsACgaiqX-TqDP6FX1ez8QxMiBOUZ9QmXEdtH9gHT9Lq8zDHvki3ZfGDAsm-AaAh1lEALw_wcB)
 
 
  
