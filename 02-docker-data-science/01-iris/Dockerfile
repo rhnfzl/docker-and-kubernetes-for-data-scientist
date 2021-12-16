@@ -22,4 +22,4 @@ RUN pip --no-cache-dir install numpy pandas seaborn sklearn jupyter
 EXPOSE 8888
 
 # Run jupyter when container launches
-CMD ["jupyter", "notebook", "--ip='*'", "--port=8888", "--no-browser", "--allow-root"]
+CMD ["jupyter", "notebook", "--ip='0.0.0.0'", "--port=8888", "--no-browser", "--allow-root"]

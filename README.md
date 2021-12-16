@@ -18,12 +18,19 @@ DockerHUb has Images -->
 >> * Container is a running environment for Image. <br />
 >> * Container provides the application image, port binding, virtual file system. <br />
 >> * Docker images are read-only templates used to build containers and Containers are deployed instances created from those templates. <br />
+>> * Running Instance of an Image is called Container. <br />
 
 ### Resource Used
 
 * [Docker Tutorial for Beginners](https://youtu.be/3c-iBn73dDE)
 * [Docker for Data Science](https://youtu.be/jbb1dbFaovg) and the [GitHub Repo](https://github.com/docker-for-data-science/docker-for-data-science-tutorial)
 
+
+Docker File -build-> Dokcer Image -run-> Container
+						|		|
+						Push	Pull
+						|		|
+						Docker Registry
 ### Dockerfile
 
 * File containing all commands used to assemble image
@@ -187,7 +194,7 @@ A structured way to store docker comments in ```.yaml``` file. Docker Compose ta
 
 ## Addtional Resources
 
-[Docker Labs](https://github.com/docker/labs)
+[Docker Labs](https://github.com/docker/labs) and [also this](https://notes.hamel.dev/docs/docker/Docker-In-Action.html)
 [How Docker Can Help You Become A More Effective Data Scientist](https://towardsdatascience.com/how-docker-can-help-you-become-a-more-effective-data-scientist-7fc048ef91d5)
 [A Step Towards Reproducible Data Science : Docker for Data Science Workflows](https://www.analyticsvidhya.com/blog/2017/11/reproducible-data-science-docker-for-data-science/)
 [Docker Deep Dive](https://www.pluralsight.com/courses/docker-deep-dive-update?aid=7010a000002BWqGAAW&promo=&utm_source=non_branded&utm_medium=digital_paid_search_google&utm_campaign=EMEA_Dynamic&utm_content=&gclid=Cj0KCQiA5OuNBhCRARIsACgaiqX-TqDP6FX1ez8QxMiBOUZ9QmXEdtH9gHT9Lq8zDHvki3ZfGDAsm-AaAh1lEALw_wcB)

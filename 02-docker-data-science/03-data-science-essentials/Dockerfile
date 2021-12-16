@@ -9,4 +9,4 @@ RUN pip install --upgrade pip && \
 EXPOSE 8888
 EXPOSE 9000
 
-CMD ["jupyter", "notebook", "--ip='*'", "--port=8888", "--no-browser", "--allow-root"]
+CMD ["jupyter", "notebook", "--ip='0.0.0.0'", "--port=8888", "--no-browser", "--allow-root"]
