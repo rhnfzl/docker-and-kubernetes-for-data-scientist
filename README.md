@@ -194,10 +194,12 @@ A structured way to store docker comments in ```.yaml``` file. Docker Compose ta
 
 ## Addtional Resources
 
-[Docker Labs](https://github.com/docker/labs) and [also this](https://notes.hamel.dev/docs/docker/Docker-In-Action.html)
-[How Docker Can Help You Become A More Effective Data Scientist](https://towardsdatascience.com/how-docker-can-help-you-become-a-more-effective-data-scientist-7fc048ef91d5)
-[A Step Towards Reproducible Data Science : Docker for Data Science Workflows](https://www.analyticsvidhya.com/blog/2017/11/reproducible-data-science-docker-for-data-science/)
-[Docker Deep Dive](https://www.pluralsight.com/courses/docker-deep-dive-update?aid=7010a000002BWqGAAW&promo=&utm_source=non_branded&utm_medium=digital_paid_search_google&utm_campaign=EMEA_Dynamic&utm_content=&gclid=Cj0KCQiA5OuNBhCRARIsACgaiqX-TqDP6FX1ez8QxMiBOUZ9QmXEdtH9gHT9Lq8zDHvki3ZfGDAsm-AaAh1lEALw_wcB)
+[Docker Labs](https://github.com/docker/labs) and [also this](https://notes.hamel.dev/docs/docker/Docker-In-Action.html) <br />
+[How Docker Can Help You Become A More Effective Data Scientist](https://towardsdatascience.com/how-docker-can-help-you-become-a-more-effective-data-scientist-7fc048ef91d5) <br />
+[A Step Towards Reproducible Data Science : Docker for Data Science Workflows](https://www.analyticsvidhya.com/blog/2017/11/reproducible-data-science-docker-for-data-science/) <br />
+[Docker Deep Dive](https://www.pluralsight.com/courses/docker-deep-dive-update?aid=7010a000002BWqGAAW&promo=&utm_source=non_branded&utm_medium=digital_paid_search_google&utm_campaign=EMEA_Dynamic&utm_content=&gclid=Cj0KCQiA5OuNBhCRARIsACgaiqX-TqDP6FX1ez8QxMiBOUZ9QmXEdtH9gHT9Lq8zDHvki3ZfGDAsm-AaAh1lEALw_wcB) <br />
+[Docker for Data Science – A Step by Step Guide](https://dagshub.com/blog/setting-up-data-science-workspace-with-docker/) <br />
+[Docker for data science](https://medium.com/analytics-vidhya/docker-for-data-science-442299c5203c) <br />
 
 
  
